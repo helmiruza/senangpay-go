@@ -2,12 +2,13 @@ package models
 
 type Payment struct {
   Detail string `json:"detail"`
-  Amount float `json:"amount"`
+  Amount float64 `json:"amount"`
   OrderId string `json:"order_id"`
   Hash string `json:"hash"`
   Name string `json:"name"`
   Email string `json:"email"`
   Phone string `json:"phone"`
+  Link string `json:"link"`
 }
 
 type PaymentResponse struct {
