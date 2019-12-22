@@ -1,13 +1,13 @@
-package billplz
+package senangpay
 
 import (
   "encoding/json"
-
-  models "github.com/billplz/billplz-go/models"
+  models "github.com/helmiruza/senangpay-go/models"
 )
 
 var ENVIRONMENT = ""
-var APIKEY = ""
+var MERCHANTID = ""
+var SECRETKEY = ""
 var URL = ""
 
 const (
@@ -15,9 +15,10 @@ const (
 	StagingUrl = "https://sandbox.senangpay.my"
 )
 
-func Init(e string, f string) {
+func Init(e string, f string, g string) {
 	ENVIRONMENT = e
-  APIKEY = f
+  MERCHANTID = f
+  SECRETKEY = g
 
   if ENVIRONMENT == "production" {
     URL = ProductionUrl
